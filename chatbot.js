@@ -1,5 +1,5 @@
 function speak(){
-  var answer = "What's up"
+  var answer = "Hi"
     $("#chat-area").html(answer);
 
 }
