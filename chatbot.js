@@ -1,5 +1,15 @@
+var responses = {
+ 'name': 'im skye',
+'age': 'im a computer',
+'hi': 'hello',
+'morning' : 'Good morning'
+};
+
+
 function speak(){
-  var answer = "Hi"
-    $("#chat-area").html(answer);
+
+  var question = $("#input").val();
+  var answer = responses[question];
+  $("#chat-area").html(answer);
 
 }
