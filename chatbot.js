@@ -3,7 +3,12 @@ var responses = {
 'age': 'im a computer',
 'hi': 'hello',
 'morning' : 'Good morning',
-'hows the weather' : 'sunny'
+'hows the weather' : 'sunny',
+'how are you' : 'im good',
+'whats 8273 * 5' : '41365',
+'im bored' : 'ok?',
+'what time is it' : '9:03am',
+'whats todays date' : 'september 27, 2016'
 };
 
 
