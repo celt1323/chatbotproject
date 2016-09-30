@@ -14,26 +14,33 @@ var responses = {
 'whats 8273 * 5' : '41365',
 'im bored' : 'ok?',
 'what time is it' : "It is currently " + returnTime() + ".",
-'whats todays date' : 'september 27, 2016'
+'whats month is it' : 'october'
 };
 
 function speak(){
-  // if(responses == undefined){
-  //    var fallBackResponse = ('ummmm');
-  //    $("#chat-area").html(fallBackResponse);
-  // }
+
 var question = $("#input").val();
 var answer = responses[question];
-  $("#chat-area").html(answer);
+
+  $("#chat-area").prepend(question);
+
+   if(answer == undefined){
+      var fallBackResponse = 'i have no answer for that';
+      $("#chat-area").prepend(fallBackResponse);
+  }
+else{
+
+  $("#chat-area").prepend(answer);
+}
+
+
+
 
 
 }
 
  $(document).keydown(function(e) {
   if (e.keyCode == 13) {
-    return speak();
+   speak();
   }
 });
-
-  // $("#chat-area").prepend(answer);
-  // $("#chat-area").append(question);
