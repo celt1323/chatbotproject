@@ -1,8 +1,7 @@
-function returnTime(){
-var now = new Date(Date.now());
-var hours = now.getHours();
-// returnTime(hours);
-}
+  function returnTime() {
+  var now = new Date(Date.now());
+  var hours = now.getHours();
+  }
 
 
 var responses = {
@@ -18,26 +17,23 @@ var responses = {
 'whats todays date' : 'september 27, 2016'
 };
 
-// var fallbackResponse = {
-//   'ummmm'
-//   'i dont know what you mean'
-//   '????'
-// }
-
-
 function speak(){
-// if(responses == undefined){
-//   var fallbackResponse = responses[question];
-//     $("#chat-area").html(fallbackResponse);
-// }
-
-
-  var question = $("#input").val();
+  // if(responses == undefined){
+  //    var fallBackResponse = ('ummmm');
+  //    $("#chat-area").html(fallBackResponse);
+  // }
+var question = $("#input").val();
 var answer = responses[question];
   $("#chat-area").html(answer);
 
 
 }
 
-  // $("#chat-area").prepend(responses);
-  // $("#input").append(question);
+ $(document).keydown(function(e) {
+  if (e.keyCode == 13) {
+    return speak();
+  }
+});
+
+  // $("#chat-area").prepend(answer);
+  // $("#chat-area").append(question);
